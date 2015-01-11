@@ -405,7 +405,7 @@ footer .footer-copyright img {
 }
 
 footer .footer-copyright {
-  min-width: 400px;
+  /* min-width: 400px; */
   text-align: left;
 }
 
@@ -414,7 +414,7 @@ footer .footer-copyright .tiy-logo {
 }
 
 footer .footer-nav {
-  min-width: 400px;
+  /* min-width: 400px; */
   text-align: right;
 }
 
@@ -453,6 +453,7 @@ footer ul li a {
  * Go full mobile @ 700px
  */
 @media (max-width: 700px) {
+
   .header-top {
     width: 100%;
     height: 100px;
@@ -492,8 +493,13 @@ footer ul li a {
     padding-bottom: 2%;
   }
 
+  .article {
+    width: 100%;
+  }
+
   .article-body {
     width: 100%;
+    padding: 0 2%;
   }
 
   .action {
@@ -506,7 +512,7 @@ footer ul li a {
   .sidebar {
     position: relative;
     width: 100%;
-    margin: 0 2%;
+    padding: 0 2%;
   }
 
   .sidebar-author {
@@ -546,11 +552,17 @@ footer ul li a {
     opacity: 1;
   }
 
+  .previews {
+    width: 100%;
+  }
+
   .preview-header {
     margin-top: 5%;
   }
 
   .preview-slider {
+    width: 99%;
+    margin: 0 auto;
     text-align: center;
   }
 
@@ -563,8 +575,9 @@ footer ul li a {
   footer {
     position: relative;
     width: 100%;
-    height: 150px;
+    height: 175px;
     margin: 0;
+    /* min-width: px; */
   }
 
   footer .footer-nav {
@@ -572,32 +585,42 @@ footer ul li a {
     top: 0;
     left: 0;
     width: 100%;
-    text-align: center;
+    align: center;
     margin-top: 10px;
   }
 
   footer .footer-nav ul {
+    position: relative;
     padding: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  footer .footer-nav ul li {
+    display: inline-block;
   }
 
   footer .footer-copyright {
     position: absolute;
-    top: 40px;
+    top: 60px;
     left: 0;
     width: 100%;
     text-align: center;
   }
 
   footer .footer-copyright .tiy-logo {
+    position: relative;
     width: 100%;
   }
 
   footer .footer-copyright .line1 {
+    position: relative;
     display: inline-block;
     width: 100%;
   }
 
   footer .footer-copyright .line2 {
+    position: relative;
     display: inline-block;
     width: 100%;
   }
