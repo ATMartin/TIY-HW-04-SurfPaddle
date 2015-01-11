@@ -110,20 +110,21 @@ header {
 .header-top .header-nav img {
   vertical-align: bottom;
 }
-header .header-title {
+
+.header-title {
   position: relative;
   text-align: center;
   color: white;
   margin-bottom: 0;
 }
 
-header .header-title h1 {
+.header-title h1 {
   margin-top: 10%;
   margin-bottom: 0;
   font-size: 100px;
 }
 
-header .header-subtitle {
+.header-subtitle {
   position: relative;
   text-align: center;
   color: black;
@@ -258,7 +259,6 @@ header .header-subtitle {
 }
 
 .action a {
-  /*vertical-align: middle;*/
   display: block;
   float: left;
   height: 20px;
@@ -267,7 +267,6 @@ header .header-subtitle {
   color: white;
   text-decoration: none;
   font-size: 12px;
-  /*clear: right;*/
 }
 
 .clearfix { clear: both; }
@@ -382,7 +381,7 @@ header .header-subtitle {
   position: relative;
   display: inline-block;
   width: 25%;
-  min-width: 200px;
+  min-width: 330px;
   height: 330px;
   background-size: cover;
 }
@@ -425,10 +424,12 @@ footer .footer-copyright img {
 }
 
 footer .footer-copyright {
+  min-width: 400px;
   text-align: left;
 }
 
 footer .footer-nav {
+  min-width: 400px;
   text-align: right;
 }
 
@@ -450,6 +451,70 @@ footer ul li a {
   text-decoration: none;
 }
 
-/******* EFFECTS *******/
+/********* MEDIA / RESPONSE ***********/
 
-/******* TYOPGRAPHY ********/
+/**
+ * Transitional Resize @ 950px for small screens
+ *  - maybe tablets?
+ */
+@media (max-width: 950px) {
+  header .header-title h1 { font-size: 60px; }
+  .article-title h2       { font-size: 40px; }
+  .preview-header h2      { font-size: 40px; }
+  .preview-image h2       { font-size: 20px; }
+}
+
+/**
+ * Go full mobile @ 700px
+ */
+@media (max-width: 700px) {
+  .header-top {
+    width: 100%;
+    height: 100px;
+    margin: 0;
+  }
+
+/*   .header-top .header-nav {
+  float: left;
+  width: 100%;
+  text-align: center;
+} */
+  .header-top .header-nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .header-top .header-logo span {
+    display: none;
+  }
+
+  .header-top .header-logo {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+/*   .header-top .header-logo {
+  float: left;
+  width: 100%;
+  text-align: center;
+} */
+
+  .header-title {
+   width: 100%;
+  }
+
+  .header-title h1 {
+    font-size: 30px !important;
+    margin-top: 0;
+  }
+
+  .header-subtitle {
+    padding-bottom: 2%;
+  }
+}
