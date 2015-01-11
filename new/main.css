@@ -37,8 +37,24 @@ a:hover { color: #196EB1; }
   right: 0;
   width: 100%;
   height: 100%;
+  transition: opacity 0.5s;
 }
 
+.overlay:hover:before {
+  opacity: 0;
+}
+
+.overlay:hover h2 {
+  color: #FFFFFF;
+}
+
+.action:hover .action-icon {
+  background-color: #0B3551;
+}
+
+.action:hover .action-link {
+  background-color: #196EB1;
+}
 /******* TYOPGRAPHY ********/
 
 
@@ -76,6 +92,15 @@ header {
   display: inline-block;
   font-family: "Oswald";
   font-size: 18px;
+}
+
+.header-top .header-nav ul li a {
+  text-decoration: none;
+  color: #0B3551;
+}
+
+.header-top .header-nav ul li a:hover {
+   color: #196EB1;
 }
 
 .header-top .header-logo img {
@@ -216,6 +241,7 @@ header .header-subtitle {
   width: 30px;
   height: 30px;
   /*vertical-align: middle;*/
+  transition: background-color 0.5s;
 }
 
 .action-icon img {
@@ -228,6 +254,7 @@ header .header-subtitle {
   padding: 2% 5%;
   background-color: #A3B2BE;
   height: 30px;
+  transition: background-color 0.5s;
 }
 
 .action a {
@@ -265,7 +292,7 @@ header .header-subtitle {
   background-image: url('img/profile.jpg');
   background-size: cover;
   border-radius: 50%;
-  width: 35%;
+  width: 90px;
   min-height: 90px;
   margin: 0 auto;
 }
@@ -368,6 +395,7 @@ header .header-subtitle {
   font-family: "Oswald";
   color: #0B3551;
   font-size: 30px;
+  transition: color 0.5s;
 }
 
 .pic1 { background-image: url('img/kelly.jpg'); }
@@ -418,6 +446,9 @@ footer ul li:last-child {
   border: 0;
 }
 
+footer ul li a {
+  text-decoration: none;
+}
 
 /******* EFFECTS *******/
 
