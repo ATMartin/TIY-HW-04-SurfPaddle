@@ -40,6 +40,25 @@ a:hover { color: #196EB1; }
   transition: opacity 0.5s;
 }
 
+.logo-overlay:after {
+  content: "";
+  display: inline-block;
+  /* background-color: rgba(11, 53, 81, 0.8); */
+  background-image: url('icons/logo.png');
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  transition: opacity 1s;
+}
+
+.dark-overlay:hover:after {
+  opacity: 0;
+}
+
 .overlay:hover:before {
   opacity: 0;
 }
@@ -75,6 +94,11 @@ header {
   display: inline-block;
   width: 48%;
   text-align: left;
+}
+
+.header-top .babylogo {
+  display: inline-block;
+  position: relative;
 }
 
 .header-top .header-nav {
